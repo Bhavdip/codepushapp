@@ -20,7 +20,7 @@ class App extends Component {
   codePushStatusDidChange(syncStatus) {
     switch (syncStatus) {
       case CodePush.SyncStatus.CHECKING_FOR_UPDATE:
-        this.setState({ syncMessage: 'Checking for update.' });
+        this.setState({ syncMessage: 'Checking for code update.' });
         break;
       case CodePush.SyncStatus.DOWNLOADING_PACKAGE:
         this.setState({ syncMessage: 'Downloading package.' });
@@ -115,7 +115,6 @@ class App extends Component {
 
     return (
       <View style={styles.container}>
-        <Text style={styles.welcome}>Welcome to In BlockChain World!</Text>
         <Text style={styles.welcome}>Welcome to In BlockChain World!</Text>
         <TouchableOpacity onPress={this.sync.bind(this)}>
           <Text style={styles.syncButton}>Press for background sync</Text>
